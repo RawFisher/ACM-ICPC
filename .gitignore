@@ -1,0 +1,8 @@
+# editor
+.vscode
+
+# MacOS
+.DS_Store
+
+# emacs backup
+*~
