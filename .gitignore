@@ -1,6 +1,13 @@
 # editor
 .vscode
 
+# IDE
+.vs
+.idea
+
+# OUT
+out
+
 # MacOS
 .DS_Store
 
