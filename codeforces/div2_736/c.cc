@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -9,20 +10,15 @@ int main()
 
     int n, m;
     cin >> n >> m;
-    vector<int> a;
-    vector<int> b;
-    a.resize(n+1);
-    b.resize(n+1);
+    vector<int> big(n+1, 0);
+    int res = 0;
     for (int i=0; i<m; i++) {
         int u, v;
         cin >> u >> v;
-        a[u]++; a[v]++;
-        if (u > v) b[u]++;
-        else b[v]++;
+        big[min(u, v)]++;
     }
-    int res = 0;
     for (int i=1; i<=n; i++) {
-        if (a[i] == b[i]) res++;
+        if (big[i] == 0) res++;
     }
     int q;
     cin >> q;
@@ -34,17 +30,13 @@ int main()
         } else if (o == 1) {
             int u, v;
             cin >> u >> v;
-            a[u]++; a[v]++;
-            if (u > v) b[u]++;
-            else b[v]++;
-            if (a[max(u,v)]!=b[max(u,v)]) res--;
+            big[min(u, v)]++;
+            if (big[min(u, v)] == 1) res--;
         } else {
             int u, v;
             cin >> u >> v;
-            a[u]--; a[v]--;
-            if (u > v) b[u]--;
-            else b[v]--;
-            if (a[max(u,v)]==b[max(u,v)]) res++;
+            big[min(u, v)]--;
+            if (big[min(u, v)] == 0) res++;
         }
     }
     return 0;
