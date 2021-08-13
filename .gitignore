@@ -6,7 +6,8 @@
 .idea
 
 # OUT
-out
+*.out
+*.exe
 
 # MacOS
 .DS_Store
