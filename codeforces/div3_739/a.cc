@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
+
 typedef long long LL;
- 
- 
+
+
 int main()
 {
     std::ios::sync_with_stdio(false);
     cin.tie(NULL);
- 
+
     vector<int> a;
     int tot = 1;
     while (a.size() < 1000) {
