@@ -8,6 +8,7 @@
 # OUT
 *.out
 *.exe
+a
 
 # MacOS
 .DS_Store
