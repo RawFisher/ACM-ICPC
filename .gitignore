@@ -9,6 +9,13 @@
 *.out
 *.exe
 a
+b
+c
+d
+e
+f
+g
+h
 
 # MacOS
 .DS_Store
